@@ -10,7 +10,7 @@ Latar belakang project menggunakan contoh strategi marketing Erigo yang berhasil
 
 Dataset yang digunakan:
 
-`data_marketing_growth_analytics.csv`
+`[data_marketing_growth_analytics.csv](https://drive.google.com/file/d/16YPDZhN2sMJHJ5zdzvWKRuyknJokaRZY/view)`
 
 Dataset terdiri dari:
 
@@ -27,7 +27,7 @@ Analisis dilakukan melalui beberapa tahapan utama:
 2. **Data Understanding**
 3. **Data Preparation**
 4. **Visualization**
-5. **Recommendation** :chatgpt-content-reference{index="2"}
+5. **Recommendation** 
 
 ### Data Preparation
 
