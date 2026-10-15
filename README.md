@@ -1,169 +1,111 @@
-# Marketing Growth Analytics
+# Marketing Strategy – Data Marketing Growth Analytics
 
-## Project Overview
+## Deskripsi Project
 
-Project ini bertujuan untuk menganalisis performa marketing dalam menghasilkan revenue berdasarkan perilaku pengguna dan channel marketing yang digunakan.
+Project ini merupakan analisis **Marketing Growth Analytics** yang bertujuan untuk mengevaluasi performa strategi pemasaran dalam menghasilkan revenue. Analisis berfokus pada bagaimana pengguna mengenal perusahaan, perjalanan pengguna hingga melakukan pembelian, efektivitas setiap marketing channel, serta potensi revenue yang dapat dioptimalkan.
 
-Analisis difokuskan pada perjalanan pengguna mulai dari pertama kali mengenal perusahaan, melakukan interaksi dengan platform, menambahkan produk ke cart, hingga akhirnya melakukan purchase. Selain itu, project ini juga membandingkan performa masing-masing marketing channel berdasarkan **Purchase Rate** dan **Average Revenue per User (ARPU)** untuk mengidentifikasi channel dengan performa terbaik serta peluang yang masih dapat dioptimalkan.
+Latar belakang project menggunakan contoh strategi marketing Erigo yang berhasil memanfaatkan media sosial dan kolaborasi untuk meningkatkan penjualan. Dari kasus tersebut, project ini berfokus pada bagaimana data dapat digunakan untuk menganalisis performa marketing dalam menghasilkan revenue. :chatgpt-content-reference{index="0"}
 
-Dataset yang digunakan adalah:
+## Dataset
 
-**`data_marketing_growth_analytics.csv`**
+Dataset yang digunakan:
 
-- Total Rows: **800**
-- Total Columns: **16**
+`data_marketing_growth_analytics.csv`
 
-Beberapa informasi yang dianalisis mencakup channel acquisition, source, device, sessions, page views, bounce, add to cart, purchase, revenue, ad cost, clicks, impressions, repeat purchase, dan retention month.
+Dataset terdiri dari:
 
----
+- **800 baris**
+- **16 kolom**
 
-## Data Quality & Preparation
+Data mencakup informasi mengenai pengguna, channel marketing, source, device, session, page views, bounce, add to cart, purchase, revenue, advertising cost, clicks, impressions, repeat purchase, dan retention. :chatgpt-content-reference{index="1"}
 
-Sebelum melakukan analisis, dilakukan proses pengecekan kualitas data untuk memastikan dataset dapat digunakan secara konsisten.
+## Tahapan Analisis
 
-### 1. Data Types & Missing Values
+Analisis dilakukan melalui beberapa tahapan utama:
 
-Hasil pengecekan menunjukkan bahwa seluruh kolom pada dataset tidak memiliki **missing value**.
+1. **Problem Statement**
+2. **Data Understanding**
+3. **Data Preparation**
+4. **Visualization**
+5. **Recommendation** :chatgpt-content-reference{index="2"}
 
-Namun, kolom `first_visit_date` perlu disesuaikan tipe datanya menjadi format **date** agar dapat digunakan dengan tepat dalam analisis berbasis waktu.
+### Data Preparation
 
-### 2. Duplicate Data
+Proses persiapan data meliputi pemeriksaan:
 
-Tidak ditemukan baris yang terduplikasi pada dataset sehingga tidak diperlukan proses penghapusan duplicate data.
+- Data type dan missing value
+- Duplicate data
+- Konsistensi data kategorikal
+- Outlier
 
-### 3. Data Consistency
+Hasil pengecekan menunjukkan tidak terdapat missing value pada dataset, tetapi kolom `first_visit_date` perlu diubah menjadi tipe data tanggal. :chatgpt-content-reference{index="3"}
 
-Pengecekan juga dilakukan terhadap kolom kategorikal seperti `channel`, `source`, dan `device`.
+Tidak ditemukan baris duplikat pada dataset. :chatgpt-content-reference{index="4"}
 
-Hasil pemeriksaan menunjukkan bahwa tidak terdapat kategori yang tidak konsisten sehingga tidak diperlukan proses standardisasi tambahan.
+Pengecekan pada kolom kategorikal juga menunjukkan tidak terdapat kategori yang tidak konsisten sehingga tidak diperlukan penanganan tambahan. :chatgpt-content-reference{index="5"}
 
-### 4. Outlier
+## Hasil Analisis
 
-Pengecekan outlier dilakukan pada seluruh variabel numerik.
+### 1. Marketing Channel
 
-Beberapa outlier teridentifikasi pada variabel:
-
-- `bounce`
-- `repeat_purchase`
-- `purchase`
-- `revenue`
-- `retention_month`
-
-Outlier tersebut tetap dipertahankan dan tidak dilakukan treatment tambahan.
-
----
-
-## Marketing Analysis
-
-### 1. Dari Mana User Mengenal Perusahaan?
-
-Berdasarkan channel pertama yang membawa pengguna mengenal perusahaan, **Paid Ads** menjadi channel dengan proporsi pengguna terbesar.
-
-Distribusi pengguna berdasarkan channel utama:
+Channel terbesar yang mengenalkan pengguna kepada perusahaan adalah:
 
 - **Paid Ads: 31.38%**
 - **Organic Search: 24.75%**
 - **Social Media: 18.88%**
 
-Hasil ini menunjukkan bahwa Paid Ads memiliki kontribusi terbesar dalam mendatangkan awareness dan traffic awal.
+Paid Ads menjadi channel dengan jumlah pengguna terbesar pada tahap awal customer acquisition. :chatgpt-content-reference{index="6"}
 
----
+### 2. Customer Journey
 
-### 2. User Journey & Conversion Funnel
+Dari **800 pengguna** yang mengunjungi website:
 
-Dari total **800 pengguna** yang pernah mengunjungi website:
+- **329 pengguna** melakukan Add to Cart
+- **150 pengguna** melakukan Purchase
 
-- **329 pengguna** melakukan Add to Cart.
-- **150 pengguna** akhirnya melakukan Purchase.
+Bottleneck terbesar terdapat pada tahap menuju purchase dengan penurunan pengguna sebesar **45.59%**. Hal ini menjadi perhatian karena purchase merupakan aktivitas utama yang menghasilkan revenue bagi perusahaan. :chatgpt-content-reference{index="7"}
 
-Bottleneck terbesar dalam funnel terjadi pada proses menuju purchase.
+### 3. Purchase Rate
 
-Terjadi penurunan sebesar **45.59%** dari pengguna yang sudah memasukkan produk ke cart menuju pengguna yang benar-benar melakukan pembelian.
+Berdasarkan purchase rate, **Social Media** menjadi channel dengan performa terbaik dengan purchase rate sebesar **22.52%**.
 
-Hal ini menjadi perhatian penting karena purchase merupakan aktivitas utama yang secara langsung menghasilkan revenue bagi perusahaan.
-
----
-
-### 3. Channel dengan Purchase Rate Terbaik
-
-Jika dibandingkan berdasarkan **Purchase Rate**, Social Media menjadi channel dengan performa terbaik.
-
-**Social Media memiliki Purchase Rate sebesar 22.52%.**
-
-Urutan performa channel berdasarkan Purchase Rate adalah:
+Urutan performa channel berdasarkan purchase rate adalah:
 
 1. Social Media
 2. Paid Ads
 3. Referral
 4. Email
-5. Organic Search
+5. Organic Search :chatgpt-content-reference{index="8"}
 
-Hasil tersebut menunjukkan bahwa meskipun Paid Ads mendatangkan jumlah user terbesar, Social Media memiliki efektivitas yang lebih tinggi dalam mengubah pengguna menjadi pembeli.
+### 4. Average Revenue per User
 
----
+Social Media juga memiliki **ARPU (Average Revenue per User)** tertinggi sebesar **Rp69.622 per user**, kemudian diikuti oleh Referral, Paid Ads, Organic Search, dan Email. :chatgpt-content-reference{index="9"}
 
-### 4. Revenue Potential per Channel
+### 5. Potensi Channel Referral
 
-Selain Purchase Rate, performa channel juga dianalisis menggunakan **Average Revenue per User (ARPU)**.
-
-Social Media kembali menunjukkan performa tertinggi dengan:
-
-**ARPU: Rp69,622 per user**
-
-Diikuti oleh:
-
-1. Social Media
-2. Referral
-3. Paid Ads
-4. Organic Search
-5. Email
-
-Hasil ini menunjukkan bahwa Social Media tidak hanya memiliki Purchase Rate tertinggi, tetapi juga menghasilkan revenue rata-rata per user tertinggi.
-
----
-
-## Growth Opportunity
-
-Salah satu channel yang memiliki potensi untuk dikembangkan lebih lanjut adalah **Referral**.
+Channel Referral memiliki potensi untuk dikembangkan lebih lanjut.
 
 Referral memiliki:
 
-- **ARPU: Rp59,287 per user**
+- **ARPU: Rp59.287 per user**
 - **Purchase Rate: 18.67%**
 
-Nilai ARPU Referral tergolong cukup tinggi, tetapi Purchase Rate-nya masih berada di bawah Social Media.
+ARPU Referral relatif tinggi, tetapi purchase rate masih berada di bawah Social Media dan Paid Ads. Peningkatan purchase rate pada channel Referral berpotensi menghasilkan revenue yang lebih besar. :chatgpt-content-reference{index="10"}
 
-Kondisi tersebut menunjukkan adanya peluang untuk meningkatkan jumlah pengguna Referral yang akhirnya melakukan purchase.
+## Kesimpulan
 
-Jika Purchase Rate Referral dapat ditingkatkan, channel ini berpotensi memberikan kontribusi revenue yang lebih besar bagi perusahaan.
+Berdasarkan hasil analisis:
 
----
+- **Social Media** menjadi marketing channel dengan performa terbaik dari sisi **Purchase Rate** dan **ARPU**.
+- **Referral** memiliki potensi revenue yang tinggi sebesar **Rp59.287 per user**, tetapi purchase rate masih sebesar **18.67%**.
+- Peningkatan conversion pada Referral dapat menjadi salah satu peluang untuk meningkatkan revenue perusahaan. :chatgpt-content-reference{index="11"}
 
 ## Recommendation
 
-Berdasarkan hasil analisis, perusahaan dapat mengembangkan program referral untuk meningkatkan Purchase Rate dari channel Referral.
+Strategi yang direkomendasikan adalah meningkatkan performa channel Referral melalui program seperti:
 
-Beberapa bentuk program yang dapat digunakan antara lain:
+- Referral code
+- Voucher **“Ajak Teman”**
+- Reward untuk existing customer
 
-- Referral Code
-- Voucher "Ajak Teman"
-- Reward bagi existing customer yang berhasil mengajak pengguna baru
-
-Strategi ini diarahkan untuk meningkatkan konversi pengguna dari channel Referral sehingga potensi revenue dari channel tersebut dapat dimaksimalkan.
-
----
-
-## Conclusion
-
-Hasil analisis menunjukkan bahwa **Social Media merupakan marketing channel dengan performa terbaik**, baik berdasarkan Purchase Rate maupun Average Revenue per User (ARPU).
-
-Social Media memiliki:
-
-- **Purchase Rate tertinggi: 22.52%**
-- **ARPU tertinggi: Rp69,622 per user**
-
-Namun, terdapat peluang pertumbuhan pada **Referral Channel**.
-
-Referral telah menghasilkan **ARPU sebesar Rp59,287 per user**, tetapi Purchase Rate masih berada pada **18.67%**.
-
-Oleh karena itu, meningkatkan conversion rate dari channel Referral melalui program seperti referral code, voucher ajak teman, atau customer reward dapat menjadi salah satu strategi untuk meningkatkan revenue perusahaan.
+Program tersebut diarahkan untuk meningkatkan purchase rate dari pengguna yang berasal dari Referral sehingga potensi revenue channel ini dapat dimaksimalkan. :chatgpt-content-reference{index="12"}
