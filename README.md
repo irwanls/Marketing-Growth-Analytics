@@ -10,7 +10,7 @@ Latar belakang project menggunakan contoh strategi marketing Erigo yang berhasil
 
 Dataset yang digunakan:
 
-`[data_marketing_growth_analytics.csv](https://drive.google.com/file/d/16YPDZhN2sMJHJ5zdzvWKRuyknJokaRZY/view)`
+`[[data_marketing_growth_analytics.csv](https://drive.google.com/file/d/16YPDZhN2sMJHJ5zdzvWKRuyknJokaRZY/view)]`
 
 Dataset terdiri dari:
 
@@ -40,7 +40,7 @@ Proses persiapan data meliputi pemeriksaan:
 
 Hasil pengecekan menunjukkan tidak terdapat missing value pada dataset, tetapi kolom `first_visit_date` perlu diubah menjadi tipe data tanggal. :chatgpt-content-reference{index="3"}
 
-Tidak ditemukan baris duplikat pada dataset. :chatgpt-content-reference{index="4"}
+Tidak ditemukan baris duplikat pada dataset.
 
 Pengecekan pada kolom kategorikal juga menunjukkan tidak terdapat kategori yang tidak konsisten sehingga tidak diperlukan penanganan tambahan. :chatgpt-content-reference{index="5"}
 
