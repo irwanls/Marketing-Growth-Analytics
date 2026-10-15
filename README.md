@@ -10,7 +10,7 @@ Latar belakang project menggunakan contoh strategi marketing Erigo yang berhasil
 
 Dataset yang digunakan:
 
-`[[data_marketing_growth_analytics.csv](https://drive.google.com/file/d/16YPDZhN2sMJHJ5zdzvWKRuyknJokaRZY/view)]`
+[[data_marketing_growth_analytics.csv](https://drive.google.com/file/d/16YPDZhN2sMJHJ5zdzvWKRuyknJokaRZY/view)]
 
 Dataset terdiri dari:
 
