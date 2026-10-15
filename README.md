@@ -17,7 +17,7 @@ Dataset terdiri dari:
 - **800 baris**
 - **16 kolom**
 
-Data mencakup informasi mengenai pengguna, channel marketing, source, device, session, page views, bounce, add to cart, purchase, revenue, advertising cost, clicks, impressions, repeat purchase, dan retention. :chatgpt-content-reference{index="1"}
+Data mencakup informasi mengenai pengguna, channel marketing, source, device, session, page views, bounce, add to cart, purchase, revenue, advertising cost, clicks, impressions, repeat purchase, dan retention. 
 
 ## Tahapan Analisis
 
@@ -38,12 +38,11 @@ Proses persiapan data meliputi pemeriksaan:
 - Konsistensi data kategorikal
 - Outlier
 
-Hasil pengecekan menunjukkan tidak terdapat missing value pada dataset, tetapi kolom `first_visit_date` perlu diubah menjadi tipe data tanggal. :chatgpt-content-reference{index="3"}
+Hasil pengecekan menunjukkan tidak terdapat missing value pada dataset, tetapi kolom `first_visit_date` perlu diubah menjadi tipe data tanggal. 
 
 Tidak ditemukan baris duplikat pada dataset.
 
-Pengecekan pada kolom kategorikal juga menunjukkan tidak terdapat kategori yang tidak konsisten sehingga tidak diperlukan penanganan tambahan. :chatgpt-content-reference{index="5"}
-
+Pengecekan pada kolom kategorikal juga menunjukkan tidak terdapat kategori yang tidak konsisten sehingga tidak diperlukan penanganan tambahan. 
 ## Hasil Analisis
 
 ### 1. Marketing Channel
@@ -54,8 +53,7 @@ Channel terbesar yang mengenalkan pengguna kepada perusahaan adalah:
 - **Organic Search: 24.75%**
 - **Social Media: 18.88%**
 
-Paid Ads menjadi channel dengan jumlah pengguna terbesar pada tahap awal customer acquisition. :chatgpt-content-reference{index="6"}
-
+Paid Ads menjadi channel dengan jumlah pengguna terbesar pada tahap awal customer acquisition. 
 ### 2. Customer Journey
 
 Dari **800 pengguna** yang mengunjungi website:
@@ -63,7 +61,7 @@ Dari **800 pengguna** yang mengunjungi website:
 - **329 pengguna** melakukan Add to Cart
 - **150 pengguna** melakukan Purchase
 
-Bottleneck terbesar terdapat pada tahap menuju purchase dengan penurunan pengguna sebesar **45.59%**. Hal ini menjadi perhatian karena purchase merupakan aktivitas utama yang menghasilkan revenue bagi perusahaan. :chatgpt-content-reference{index="7"}
+Bottleneck terbesar terdapat pada tahap menuju purchase dengan penurunan pengguna sebesar **45.59%**. Hal ini menjadi perhatian karena purchase merupakan aktivitas utama yang menghasilkan revenue bagi perusahaan. 
 
 ### 3. Purchase Rate
 
@@ -75,11 +73,11 @@ Urutan performa channel berdasarkan purchase rate adalah:
 2. Paid Ads
 3. Referral
 4. Email
-5. Organic Search :chatgpt-content-reference{index="8"}
+5. Organic Search 
 
 ### 4. Average Revenue per User
 
-Social Media juga memiliki **ARPU (Average Revenue per User)** tertinggi sebesar **Rp69.622 per user**, kemudian diikuti oleh Referral, Paid Ads, Organic Search, dan Email. :chatgpt-content-reference{index="9"}
+Social Media juga memiliki **ARPU (Average Revenue per User)** tertinggi sebesar **Rp69.622 per user**, kemudian diikuti oleh Referral, Paid Ads, Organic Search, dan Email. 
 
 ### 5. Potensi Channel Referral
 
@@ -90,7 +88,7 @@ Referral memiliki:
 - **ARPU: Rp59.287 per user**
 - **Purchase Rate: 18.67%**
 
-ARPU Referral relatif tinggi, tetapi purchase rate masih berada di bawah Social Media dan Paid Ads. Peningkatan purchase rate pada channel Referral berpotensi menghasilkan revenue yang lebih besar. :chatgpt-content-reference{index="10"}
+ARPU Referral relatif tinggi, tetapi purchase rate masih berada di bawah Social Media dan Paid Ads. Peningkatan purchase rate pada channel Referral berpotensi menghasilkan revenue yang lebih besar. 
 
 ## Kesimpulan
 
@@ -98,7 +96,7 @@ Berdasarkan hasil analisis:
 
 - **Social Media** menjadi marketing channel dengan performa terbaik dari sisi **Purchase Rate** dan **ARPU**.
 - **Referral** memiliki potensi revenue yang tinggi sebesar **Rp59.287 per user**, tetapi purchase rate masih sebesar **18.67%**.
-- Peningkatan conversion pada Referral dapat menjadi salah satu peluang untuk meningkatkan revenue perusahaan. :chatgpt-content-reference{index="11"}
+- Peningkatan conversion pada Referral dapat menjadi salah satu peluang untuk meningkatkan revenue perusahaan. 
 
 ## Recommendation
 
@@ -108,4 +106,4 @@ Strategi yang direkomendasikan adalah meningkatkan performa channel Referral mel
 - Voucher **“Ajak Teman”**
 - Reward untuk existing customer
 
-Program tersebut diarahkan untuk meningkatkan purchase rate dari pengguna yang berasal dari Referral sehingga potensi revenue channel ini dapat dimaksimalkan. :chatgpt-content-reference{index="12"}
+Program tersebut diarahkan untuk meningkatkan purchase rate dari pengguna yang berasal dari Referral sehingga potensi revenue channel ini dapat dimaksimalkan. 
